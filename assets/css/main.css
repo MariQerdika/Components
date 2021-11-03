@@ -274,4 +274,130 @@ html {
 body.dark .switcher3 {
   background-color: #4c4a4a;
 }
+
+.search_wrap {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #222020;
+}
+
+.content-s {
+  width: 30rem;
+}
+
+@media (max-width: 991.98px) {
+  .content-s {
+    position: absolute;
+    left: 15rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .content-s {
+    left: 12rem;
+    width: 18rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .content-s {
+    display: none;
+  }
+}
+
+.search {
+  border: 2px solid #057581;
+  background: #154c52;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100vh;
+  overflow: hidden;
+  font-size: 1.25em;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  -webkit-transition: width 450ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: width 450ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  z-index: 1;
+}
+
+.search__input {
+  border: 0;
+  padding: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  outline: 0;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  opacity: 0;
+  cursor: pointer;
+  padding-right: 50px;
+}
+
+.search__submit {
+  font-size: 1.5rem;
+  margin-left: auto;
+  background: 0;
+  border: 0;
+  cursor: pointer;
+  border-radius: 100vh;
+  -webkit-transition: 200ms ease-out;
+  transition: 200ms ease-out;
+  width: 40px;
+  height: 40px;
+  color: #333;
+}
+
+.search__submit svg {
+  width: 20px;
+  height: 20px;
+}
+
+.search:focus-within {
+  width: 100%;
+}
+
+.search:focus-within .search__input {
+  opacity: 1;
+  z-index: initial;
+  cursor: initial;
+  width: 100%;
+  letter-spacing: 1px;
+  font-family: "Poppins";
+  font-size: 1rem;
+}
+
+.search:focus-within .search__submit {
+  background: #dffcff;
+  color: white;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.search:focus-within .search__submit:hover, .search:focus-within .search__submit:focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
+}
 /*# sourceMappingURL=main.css.map */
