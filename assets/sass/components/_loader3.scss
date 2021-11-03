@@ -1,0 +1,37 @@
+.loader3 {
+  min-height: 100vh;
+  background-color: #1e0d16;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__circle {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    position: relative;
+  }
+  &__c1,
+  &__c2 {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background-color: #f10a7d;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: loader3 2s ease-in-out infinite;
+  }
+  &__c2 {
+    animation-delay: 1s;
+  }
+}
+
+@keyframes loader3 {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
