@@ -1,0 +1,47 @@
+.switcher1 {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: grey;
+  align-items: center;
+  padding-top: 5rem;
+
+  h1 {
+    font-size: 3rem;
+    margin-top: 3rem;
+  }
+  label {
+    width: 10rem;
+    height: 4rem;
+    border-radius: 5rem;
+    overflow: hidden;
+    position: relative;
+    background-color: #4a474c;
+    cursor: pointer;
+
+    input {
+      display: none;
+    }
+  }
+  &__ball {
+    height: 4rem;
+    width: 4rem;
+    display: inline-block;
+    background-color: aqua;
+    border-radius: 50%;
+    transition: 0.5s;
+  }
+}
+.switcher1 label input:checked ~ .switcher1__ball {
+  transform: translateX(6rem);
+  background-color: yellow;
+}
+body.dark {
+  .switcher1 {
+    background-color: #16280c;
+
+    h1 {
+      color: yellow;
+    }
+  }
+}

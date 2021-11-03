@@ -1,6 +1,60 @@
-* {
-  margin: 0;
-  padding: 0;
+.switcher1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  background-color: grey;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5rem;
+}
+
+.switcher1 h1 {
+  font-size: 3rem;
+  margin-top: 3rem;
+}
+
+.switcher1 label {
+  width: 10rem;
+  height: 4rem;
+  border-radius: 5rem;
+  overflow: hidden;
+  position: relative;
+  background-color: #4a474c;
+  cursor: pointer;
+}
+
+.switcher1 label input {
+  display: none;
+}
+
+.switcher1__ball {
+  height: 4rem;
+  width: 4rem;
+  display: inline-block;
+  background-color: aqua;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.switcher1 label input:checked ~ .switcher1__ball {
+  -webkit-transform: translateX(6rem);
+          transform: translateX(6rem);
+  background-color: yellow;
+}
+
+body.dark .switcher1 {
+  background-color: #16280c;
+}
+
+body.dark .switcher1 h1 {
+  color: yellow;
 }
 
 .main-list {
@@ -11,5 +65,21 @@
 .main-list .link {
   display: block;
   margin-bottom: 10px;
+}
+
+.back {
+  display: inline-block;
+  margin: 30px 0 0 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
 }
 /*# sourceMappingURL=main.css.map */
