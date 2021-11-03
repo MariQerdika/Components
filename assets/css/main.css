@@ -148,7 +148,7 @@ body.dark .switcher1 h1 {
   opacity: 1;
 }
 
-body.dark h1 {
+body.dark .switcher2 h1 {
   color: greenyellow;
 }
 
@@ -179,5 +179,99 @@ body.dark h1 {
 
 html {
   font-size: 62.5%;
+}
+
+.switcher3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #242323;
+  min-height: 100vh;
+  padding-top: 5rem;
+}
+
+.switcher3 label {
+  width: 10rem;
+  height: 4rem;
+  background-color: black;
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.switcher3 label input {
+  display: none;
+}
+
+.switcher3 h1 {
+  color: #fff;
+  padding-top: 5rem;
+  font-size: 3rem;
+}
+
+.switcher3__stars::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 15px);
+  left: -35px;
+  background-image: url(../images/sun.svg);
+  width: 35px;
+  height: 30px;
+  background-size: cover;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.switcher3__stars::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 3px;
+  background-image: url(../images/moon.svg);
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.switcher3__ball {
+  position: absolute;
+  top: calc(50% - 1.5rem);
+  left: 10px;
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  background-color: indigo;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.switcher3 label input:checked ~ .switcher3__ball {
+  -webkit-transform: translateX(5rem);
+          transform: translateX(5rem);
+}
+
+.switcher3 label input:checked ~ .switcher3__stars::before {
+  -webkit-transform: translateX(4rem);
+          transform: translateX(4rem);
+}
+
+.switcher3 label input:checked ~ .switcher3__stars::after {
+  -webkit-transform: translateX(4rem);
+          transform: translateX(4rem);
+}
+
+body.dark .switcher3 {
+  background-color: #4c4a4a;
 }
 /*# sourceMappingURL=main.css.map */

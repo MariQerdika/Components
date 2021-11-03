@@ -1,0 +1,74 @@
+.switcher3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #242323;
+  min-height: 100vh;
+  padding-top: 5rem;
+
+  label {
+    width: 10rem;
+    height: 4rem;
+    background-color: black;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    input {
+      display: none;
+    }
+  }
+  h1 {
+    color: #fff;
+    padding-top: 5rem;
+    font-size: 3rem;
+  }
+  &__stars::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 15px);
+    left: -35px;
+    background-image: url(../images/sun.svg);
+    width: 35px;
+    height: 30px;
+    background-size: cover;
+    transition: 0.5s;
+  }
+  &__stars::after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    right: 3px;
+    background-image: url(../images/moon.svg);
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    transition: 0.5s;
+  }
+  &__ball {
+    position: absolute;
+    top: calc(50% - 1.5rem);
+    left: 10px;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    background-color: indigo;
+    transition: 0.5s;
+  }
+}
+.switcher3 label input:checked ~ .switcher3__ball {
+  transform: translateX(5rem);
+}
+.switcher3 label input:checked ~ .switcher3__stars::before {
+  transform: translateX(4rem);
+}
+.switcher3 label input:checked ~ .switcher3__stars::after {
+  transform: translateX(4rem);
+}
+body.dark {
+  .switcher3 {
+    background-color: #4c4a4a;
+  }
+}
