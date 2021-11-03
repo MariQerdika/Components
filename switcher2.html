@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switcher 2</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <a href="switcher.html" class="back">GO BACK</a>
+    <div class="switcher2">
+        <label>
+            <input type="checkbox" id="checkbox">
+            <span class="switcher2__square"></span>
+            <span class="switcher2__lamp"></span>
+        </label>
+        <h1>Css Theme Color Switcher</h1>
+    </div>
+
+    <script>
+        const checkbox = document.getElementById('checkbox');
+        checkbox.addEventListener('change', () => {
+            document.body.classList.toggle('dark');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+.switcher2 {
+  background-color: #232424;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  padding-top: 5rem;
+
+  h1 {
+    font-size: 3rem;
+    margin-top: 3rem;
+    color: red;
+  }
+  input {
+    display: none;
+  }
+  label {
+    width: 8rem;
+    height: 3rem;
+    background-color: grey;
+    position: relative;
+    cursor: pointer;
+  }
+  &__square {
+    position: absolute;
+    display: inline-block;
+    background-color: #4e4b50;
+    width: 3rem;
+    height: 3rem;
+    transition: 0.5s;
+  }
+  &__lamp {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: calc(50% - 3px);
+      left: -2rem;
+      width: 6px;
+      height: 6px;
+      background-color: red;
+      transition: 0.5s;
+    }
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: calc(50% - 3px);
+      right: -2rem;
+      width: 6px;
+      height: 6px;
+      background-color: greenyellow;
+      opacity: 0;
+      transition: 0.5s;
+    }
+  }
+}
+.switcher2 label input:checked ~ .switcher2__square {
+  transform: translateX(5rem);
+}
+.switcher2 label input:checked ~ .switcher2__lamp:before {
+  opacity: 0;
+}
+.switcher2 label input:checked ~ .switcher2__lamp:after {
+  opacity: 1;
+}
+body.dark {
+  h1 {
+    color: greenyellow;
+  }
+}
