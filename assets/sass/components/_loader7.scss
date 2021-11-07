@@ -1,0 +1,38 @@
+.loader7 {
+  background-color: #5e656b;
+  position: relative;
+  min-height: 100vh;
+
+  &__loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(75deg);
+    width: 15px;
+    height: 15px;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 15px;
+      height: 15px;
+      border-radius: 5px;
+      animation: loader7 1.5s linear infinite;
+    }
+    &::before {
+      box-shadow: 15px 15px rgb(9, 189, 9), -15px -15px rgb(233, 233, 16);
+    }
+    &::after {
+      box-shadow: 15px 15px rgb(98, 175, 98), -15px -15px rgb(165, 165, 61);
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+}
+@keyframes loader7 {
+  50% {
+    width: 4rem;
+  }
+}
