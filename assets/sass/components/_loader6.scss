@@ -1,0 +1,29 @@
+.loader6 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #292e32;
+
+  &__loader {
+    width: 12rem;
+    height: 4px;
+    background-color: #18f665;
+    position: relative;
+    &::before {
+      content: "";
+      width: 4rem;
+      height: 4px;
+      background-color: #4f2578;
+      position: absolute;
+      left: 0;
+      animation: loader6 2s ease-in-out infinite;
+    }
+  }
+}
+@keyframes loader6 {
+  50% {
+    left: 8.1rem;
+  }
+}

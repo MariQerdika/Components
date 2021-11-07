@@ -7,21 +7,21 @@
   background-color: #2e2e2e;
 
   &__loading {
-    width: 80px;
+    width: 45px;
     display: flex;
     flex-wrap: wrap;
     animation: rotate4 3s linear infinite;
 
     span {
-      width: 32px;
-      height: 32px;
-      background: red;
-      margin: 4px;
+      width: 18px;
+      height: 18px;
+      background: #ffbd33;
+      margin: 2px;
       animation: loader4 2s linear infinite;
     }
     span:nth-child(1) {
       border-radius: 50% 50% 0 50%;
-      background-color: yellow;
+      background-color: #dbff33;
       transform-origin: bottom right;
       animation-delay: 1s;
     }
@@ -33,13 +33,13 @@
     }
     span:nth-child(3) {
       border-radius: 50% 0 50% 50%;
-      background-color: rgb(17, 0, 255);
+      background-color: #33ffbd;
       transform-origin: top right;
       animation-delay: 1.5s;
     }
     span:nth-child(4) {
       border-radius: 0 50% 50% 50%;
-      background-color: rgb(255, 0, 170);
+      background-color: #ffbd33;
       transform-origin: top left;
       animation-delay: 1s;
     }
