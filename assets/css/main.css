@@ -164,7 +164,7 @@ body.dark .switcher2 h1 {
 }
 
 .back {
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   font-size: 2rem;
   padding: 10px 20px;
@@ -758,6 +758,61 @@ body.dark .switcher3 {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+.loader5 {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loader5__loader {
+  width: 5rem;
+  height: 5rem;
+  border: 5px solid red;
+  border-radius: 50%;
+  border-top-color: transparent;
+  -webkit-animation: loader5 1.4s linear infinite;
+          animation: loader5 1.4s linear infinite;
+}
+
+@-webkit-keyframes loader5 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes loader5 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
   }
 }
 /*# sourceMappingURL=main.css.map */
