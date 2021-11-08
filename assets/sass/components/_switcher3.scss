@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #242323;
+  background-color: #464444;
   min-height: 100vh;
   padding-top: 5rem;
+  position: relative;
 
   label {
     width: 10rem;
@@ -67,8 +68,8 @@
 .switcher3 label input:checked ~ .switcher3__stars::after {
   transform: translateX(4rem);
 }
-body.dark {
+body.dark3 {
   .switcher3 {
-    background-color: #4c4a4a;
+    background-color: #797474;
   }
 }

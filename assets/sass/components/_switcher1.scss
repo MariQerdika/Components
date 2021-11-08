@@ -5,6 +5,7 @@
   background-color: grey;
   align-items: center;
   padding-top: 5rem;
+  position: relative;
 
   h1 {
     font-size: 3rem;
@@ -36,7 +37,7 @@
   transform: translateX(6rem);
   background-color: yellow;
 }
-body.dark {
+body.dark1 {
   .switcher1 {
     background-color: #16280c;
 

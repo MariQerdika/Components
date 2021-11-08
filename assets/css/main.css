@@ -12,6 +12,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding-top: 5rem;
+  position: relative;
 }
 
 .switcher1 h1 {
@@ -49,11 +50,11 @@
   background-color: yellow;
 }
 
-body.dark .switcher1 {
+body.dark1 .switcher1 {
   background-color: #16280c;
 }
 
-body.dark .switcher1 h1 {
+body.dark1 .switcher1 h1 {
   color: yellow;
 }
 
@@ -71,6 +72,7 @@ body.dark .switcher1 h1 {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 5rem;
+  position: relative;
 }
 
 .switcher2 h1 {
@@ -148,7 +150,7 @@ body.dark .switcher1 h1 {
   opacity: 1;
 }
 
-body.dark .switcher2 h1 {
+body.dark2 .switcher2 h1 {
   color: greenyellow;
 }
 
@@ -171,7 +173,7 @@ body.dark .switcher2 h1 {
   z-index: 1;
 }
 
-h1.loader {
+h2.number {
   font-size: 20px;
   color: #fff;
   border: 1px solid #ffffff91;
@@ -205,9 +207,10 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #242323;
+  background-color: #464444;
   min-height: 100vh;
   padding-top: 5rem;
+  position: relative;
 }
 
 .switcher3 label {
@@ -284,8 +287,8 @@ html {
           transform: translateX(4rem);
 }
 
-body.dark .switcher3 {
-  background-color: #4c4a4a;
+body.dark3 .switcher3 {
+  background-color: #797474;
 }
 
 .search_wrap {
