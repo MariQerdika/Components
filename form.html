@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Form</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <div class="form">
+        <div class="container">
+            <div class="form__text">
+                <div class="form__title form__login">
+                    Log in Form
+                </div>
+                <div class="form__title form__signup">
+                    Sign up Form
+                </div>
+            </div>
+            <div class="form__container">
+                <div class="form__slide-controls">
+                    <input type ="radio" name="slide" id="login" checked>
+                    <input type ="radio" name="slide" id="signup">
+                    <label for="login" class="slide login">Log in</label>
+                    <label for="signup" class="slide signup">Sign up</label>
+                    <div class="slider-tab"></div>
+                </div>
+                <div class="form__inner">
+                    <form action="" class="form__login">
+                        <div class="form__field">
+                            <input type="text" placeholder="Email Address" required>
+                        </div>
+                        <div class="form__field">
+                            <input type="password" placeholder="Password" required>
+                        </div>
+                        <div class="form__pass-link">
+                            <a href="#">Forgot Password ?</a>
+                        </div>
+                        <div class="field btn">
+                            <div class="form__btn-layer">
+                                <input type="submit" value="Login">
+                            </div>
+                        </div>
+                    </form>
+                    <form action="" class="form__signup">
+                        <div class="form__field">
+                            <input type="text" placeholder="Email address" required>
+                        </div>
+                        <div class="form__field">
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <div class="form__field">
+                            <input type="password" placeholder="Confirm Password" required>
+                        </div>
+                        <div class="form__field btn">
+                            <div class="form__btn-layer">
+
+                            </div>
+                            <input type="submit" value="Sign up">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const loginText = document.querySelector(".form__title");
+        const loginForm = document.querySelector(".form__inner");
+        const loginBtn = document.querySelector("label.login");
+        const signupBtn = document.querySelector("label.signup");
+
+        signupBtn.onclick = (() => {
+            loginText.style.marginLeft = "-50%";
+            loginForm.style.marginLeft = "-100%";    
+        });
+        loginBtn.onclick = (() => {
+            loginText.style.marginLeft = "0%";
+            loginForm.style.marginLeft = "0%";    
+        })
+    </script>
+</body>
+</html>
