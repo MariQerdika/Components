@@ -291,6 +291,80 @@ body.dark3 .switcher3 {
   background-color: #797474;
 }
 
+.switcher4 {
+  min-height: 100vh;
+  position: relative;
+  background-color: #6e6969;
+}
+
+.switcher4 .button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 4rem;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.switcher4 label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+}
+
+.switcher4 label span {
+  color: #888;
+  margin-left: 1rem;
+  font-size: 2rem;
+}
+
+.switcher4 input {
+  position: relative;
+  width: 9rem;
+  height: 3rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0 0 0 4px #353535;
+          box-shadow: 0 0 0 4px #353535;
+}
+
+.switcher4 input:checked {
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffef62), to(#ffe500));
+  background: linear-gradient(0deg, #ffef62, #ffe500);
+}
+
+.switcher4 input:checked ~ span {
+  color: yellow;
+}
+
+.switcher4 input::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5rem;
+  height: 3rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000), to(#6b6b6b));
+  background: linear-gradient(0deg, #000, #6b6b6b);
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 0 1px #232323;
+          box-shadow: 0 0 0 1px #232323;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.switcher4 input:checked::before {
+  left: 4rem;
+}
+
 .search1 {
   height: 100vh;
   background-color: #333;
